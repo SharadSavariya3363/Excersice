@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-12">
+    <!-- below is UI for login page -->
+    <form (ngSubmit) = 'getRandomToken()' #form = "ngForm">
+      <div ngModelGroup #formData = "ngModelGroup"> 
+          <div class="form-group">
+              <label for="username">Email</label>
+              <input type="email" id="username" class="form-control" ngModel name="email" #email ="ngModel" required>
+              <span class="help-block" *ngIf = "!email.valid && email.touched">Please enter valid Username</span>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-control" ngModel name="password" #pwd = "ngModel" required>
+              <span class="help-block" *ngIf = "!pwd.valid && pwd.touched">Please enter valid Password</span>
+          </div>
+          <p *ngIf = "!formData.valid && formData.touched">Invalid Form-Data</p>
+          <button [disabled] = "!form.valid" class="btn btn-primary my-2">Submit</button>
+      </div>
+  </form>
+  </div>
+</div>
