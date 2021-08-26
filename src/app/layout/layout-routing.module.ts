@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header.component';
-
 
 const headerRoutes: Routes =  [
-  {path: '', component: HeaderComponent}
 ]
-
 
 @NgModule({
   declarations: [],
@@ -17,8 +13,4 @@ const headerRoutes: Routes =  [
   ],
   exports: [RouterModule]
 })
-export class HeaderModule { 
-  constructor(){
-    console.log("Header Module Loaded!");
-  }
- }
+export class LayoutRoutingModule { }

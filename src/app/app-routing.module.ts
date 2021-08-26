@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  {path: '', loadChildren: () => import('./header/header.module').then(m => m.HeaderModule)},
-  {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule)},
+  {path: '', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule)},
+  {path: 'login', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)},
   {path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)},
 ]
 
